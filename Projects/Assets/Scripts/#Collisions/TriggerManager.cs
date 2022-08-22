@@ -8,6 +8,7 @@ public class TriggerManager : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Aux"))
         {
+            Debug.Log("Colisionando con: " + other.gameObject.name);
             trigger.GetComponent<Collider>().enabled = true;
         }
     }
@@ -20,13 +21,13 @@ public class TriggerManager : MonoBehaviour
             {
                 isBig = false;
                 transform.localScale /= 2;
-                Debug.Log("Shrinker");
+                Debug.Log("Encogido");
             }
             else if (isBig == false)
             {
                 isBig = true;
                 transform.localScale *= 2;
-                Debug.Log("Grows Up");
+                Debug.Log("Agrandado");
             }
         }
     }

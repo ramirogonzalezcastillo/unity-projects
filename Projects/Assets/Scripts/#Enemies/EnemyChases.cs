@@ -13,6 +13,7 @@ public class EnemyChases : MonoBehaviour
     transform del GameObject que le pongamos en el inspector. En este caso del Player*/
     [SerializeField]
     [Range(0.1f,10f)] float speedToLookLerp = 1f;
+    [SerializeField] private Animator enemyAnimator;
     void Start()
     {
     }
@@ -28,7 +29,7 @@ public class EnemyChases : MonoBehaviour
                 //MoveForward();
                 break;*/
             case ZombieType.Stalker:
-                ChasePlayer();
+                Invoke("StalkerMove",1f);
                 break;
                 /*case ZombieType.Rioter:
                     TurnAroundPlayer();
@@ -40,7 +41,11 @@ public class EnemyChases : MonoBehaviour
    LookAtPlayer();
    transform.RotateAround(playerTransform.position, Vector3.up, 5f * Time.deltaTime);
 }*/
-
+    private void StalkerMove()
+    {
+        ChasePlayer();
+        enemyAnimator.SetBool("isRunning", true);
+    }
     private void ChasePlayer()
     {
         LookAtPlayer();
