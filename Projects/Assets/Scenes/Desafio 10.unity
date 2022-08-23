@@ -131,6 +131,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 30099231, guid: a1b29dd19e111544d835faca47021560, type: 3}
+      propertyPath: speed
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 30099231, guid: a1b29dd19e111544d835faca47021560, type: 3}
+      propertyPath: zombieType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 30099231, guid: a1b29dd19e111544d835faca47021560, type: 3}
+      propertyPath: enemyAnimator
+      value: 
+      objectReference: {fileID: 1774339753}
+    - target: {fileID: 30099231, guid: a1b29dd19e111544d835faca47021560, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 2110072556}
@@ -182,6 +194,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6064950356879922228, guid: a1b29dd19e111544d835faca47021560, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: e4299bf26a09e9049839e1a1b75e562c, type: 3}
+    - target: {fileID: 6064950356879922228, guid: a1b29dd19e111544d835faca47021560, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 733b4e7ccf87d4841a8217554356a2e8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1b29dd19e111544d835faca47021560, type: 3}
 --- !u!1 &45052788
@@ -503,6 +523,7 @@ MonoBehaviour:
   zombieType: 0
   playerTransform: {fileID: 2110072556}
   speedToLookLerp: 1
+  enemyAnimator: {fileID: 0}
 --- !u!1001 &647835236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1216,6 +1237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1455290799 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 912080753170600822, guid: 90306dad0c302c542889aad873a65152, type: 3}
+  m_PrefabInstance: {fileID: 166838670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1521381203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,6 +1336,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1171202287174663610, guid: bb128543345a55849b25bf5243e6c64e, type: 3}
   m_PrefabInstance: {fileID: 647835236}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1774339753 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4212208677882919788, guid: a1b29dd19e111544d835faca47021560, type: 3}
+  m_PrefabInstance: {fileID: 43862813}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1843223454 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4991710397505204612, guid: 90306dad0c302c542889aad873a65152, type: 3}
@@ -1331,6 +1362,7 @@ MonoBehaviour:
   zombieType: 1
   playerTransform: {fileID: 2110072556}
   speedToLookLerp: 1
+  enemyAnimator: {fileID: 1455290799}
 --- !u!1 &1934394297
 GameObject:
   m_ObjectHideFlags: 0
